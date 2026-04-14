@@ -137,7 +137,7 @@ void main() {
     BigDecimal salarioMinimo = new BigDecimal("1212.00");
 
     for(Funcionario f: funcionarios){
-        BigDecimal qtdSalariosMinimos =f.salario.divide(salarioMinimo,2);
+        BigDecimal qtdSalariosMinimos =f.salario.divide(salarioMinimo,2,RoundingMode.HALF_UP);
         System.out.println(f.nome + " ganha " + formatoDecimal.format(qtdSalariosMinimos) + " salários mínimos");
     }
 }
