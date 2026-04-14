@@ -99,11 +99,18 @@ void main() {
         System.out.println();
     }
 
-   //3.7 Exibir os funcionários que fazem aniversário no mês 10 e 12
+   //3.8 Exibir os funcionários que fazem aniversário no mês 10 e 12
     for(Funcionario f: funcionarios){
         int mes = f.dataNascimento.getMonthValue();
         if (mes == 10 || mes == 12){
             System.out.println(f.nome);
         }
     }
+    System.out.println();
+
+    //3.9 Exibir funcionário com maior idade, exibir atributos: nome e idade
+    Funcionario maiorIdade = Collections.min(funcionarios, Comparator.comparing(f -> f.dataNascimento));
+    int idade = Period.between(maiorIdade.dataNascimento,LocalDate.now()).getYears();
+    System.out.println("Funcionário com maior idade: " + maiorIdade.nome + " " + idade + " anos.");
+    System.out.println();
 }
