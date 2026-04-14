@@ -80,4 +80,23 @@ void main() {
         f.salario = f.salario.multiply(aumentoSalario);
     }
 
+    //3.5 Agrupar os funcionários por função
+    Map<String, List<Funcionario>> mapFuncionariosFuncao = new HashMap<>();
+
+    for(Funcionario f: funcionarios){
+        if(!mapFuncionariosFuncao.containsKey(f.funcao)){
+            mapFuncionariosFuncao.put(f.funcao, new ArrayList<>());
+        }
+        mapFuncionariosFuncao.get(f.funcao).add(f);
+    }
+
+    //3.6 Exibir funcionários agrupados por função
+    for(String funcao: mapFuncionariosFuncao.keySet()){
+        System.out.println("Função: " + funcao);
+        for(Funcionario f: mapFuncionariosFuncao.get(funcao)){
+            System.out.println(" -- " + f.nome);
+        }
+        System.out.println();
+    }
+
 }
