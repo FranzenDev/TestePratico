@@ -72,4 +72,12 @@ void main() {
         System.out.println("Função: " + f.funcao);
         System.out.println();
     }
+
+    //3.4 aumento de 10% no salário e atualizar a lista com o novo valor
+    BigDecimal aumentoSalario = new BigDecimal("1.10");
+
+    for (Funcionario f : funcionarios){
+        f.salario = f.salario.multiply(aumentoSalario);
+    }
+
 }
