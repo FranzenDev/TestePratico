@@ -113,4 +113,13 @@ void main() {
     int idade = Period.between(maiorIdade.dataNascimento,LocalDate.now()).getYears();
     System.out.println("Funcionário com maior idade: " + maiorIdade.nome + " " + idade + " anos.");
     System.out.println();
+
+    //3.10 Exibir funcionários em ordem alfabética
+    //ordenando lista
+    funcionarios.sort(Comparator.comparing(f -> f.nome));
+
+    System.out.println("Funcionários ordenados por nome em ordem alfabética:");
+    for(Funcionario f : funcionarios){
+        System.out.println(f.nome);
+    }
 }
