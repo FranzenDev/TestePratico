@@ -122,4 +122,14 @@ void main() {
     for(Funcionario f : funcionarios){
         System.out.println(f.nome);
     }
+    System.out.println();
+
+    //3.11 exibir a soma de todos os salários dos funcionários
+    BigDecimal total = BigDecimal.ZERO;
+
+    for(Funcionario f: funcionarios){
+        total = total.add(f.salario);
+    }
+    System.out.println("Salários somados, total = "+ formatoDecimal.format(total));
+    System.out.println();
 }
