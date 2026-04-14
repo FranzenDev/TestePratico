@@ -12,7 +12,7 @@ void main() {
             "Operador"));
     funcionarios.add(new Funcionario(
             "João",
-            LocalDate.of(1990,05,12),
+            LocalDate.of(1990,5,12),
             new BigDecimal("2284.38"),
             "Operador"));
     funcionarios.add(new Funcionario(
