@@ -3,7 +3,7 @@ package br.com.teste.model;
 import java.time.LocalDate;
 
 public class Pessoa {
-    String nome;
+    public String nome;
     LocalDate dataNascimento;
 
     public Pessoa(String nome, LocalDate dataNascimento){
