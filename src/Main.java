@@ -73,7 +73,7 @@ void main() {
         System.out.println();
     }
 
-    //3.4 aumento de 10% no salário e atualizar a lista com o novo valor
+    //3.4 Aumento de 10% no salário e atualizar a lista com o novo valor
     BigDecimal aumentoSalario = new BigDecimal("1.10");
 
     for (Funcionario f : funcionarios){
@@ -124,7 +124,7 @@ void main() {
     }
     System.out.println();
 
-    //3.11 exibir a soma de todos os salários dos funcionários
+    //3.11 Exibir a soma de todos os salários dos funcionários
     BigDecimal total = BigDecimal.ZERO;
 
     for(Funcionario f: funcionarios){
@@ -132,4 +132,12 @@ void main() {
     }
     System.out.println("Salários somados, total = "+ formatoDecimal.format(total));
     System.out.println();
+
+    //3.12 Exibir quantos salários mínimos cada funcionário ganha
+    BigDecimal salarioMinimo = new BigDecimal("1212.00");
+
+    for(Funcionario f: funcionarios){
+        BigDecimal qtdSalariosMinimos =f.salario.divide(salarioMinimo,2);
+        System.out.println(f.nome + " ganha " + formatoDecimal.format(qtdSalariosMinimos) + " salários mínimos");
+    }
 }
