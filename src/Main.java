@@ -22,7 +22,7 @@ void main() {
             "Coordenador"));
     funcionarios.add(new Funcionario(
             "Miguel",
-            LocalDate.of(1988,5,2),
+            LocalDate.of(1988,10,14),
             new BigDecimal("19119.88"),
             "Diretor"));
     funcionarios.add(new Funcionario(
@@ -99,4 +99,11 @@ void main() {
         System.out.println();
     }
 
+   //3.7 Exibir os funcionários que fazem aniversário no mês 10 e 12
+    for(Funcionario f: funcionarios){
+        int mes = f.dataNascimento.getMonthValue();
+        if (mes == 10 || mes == 12){
+            System.out.println(f.nome);
+        }
+    }
 }
